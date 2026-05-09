@@ -1,0 +1,11 @@
+title: "ZOO — Sponsor & Funding"
+description: "Support open-source AI development. Sponsor ZOO (Nous Research) and help build the future of AI agents."
+baseurl: "/zoo-sponsors"
+url: "https://crazycompanyinc.github.io"
+theme: null
+plugins: []
+exclude:
+  - README.md
+  - SPONSORS.md
+  - CORPORATE.md
+  - .github/

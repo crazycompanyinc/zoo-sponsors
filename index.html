@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZOO — Sponsor & Funding</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --green: #3fb950;
+  --purple: #bc8cff;
+  --orange: #f0883e;
+  --red: #f85149;
+  --gradient1: linear-gradient(135deg, #58a6ff, #bc8cff);
+  --gradient2: linear-gradient(135deg, #3fb950, #58a6ff);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Header */
+.header {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  background: var(--gradient1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav a { margin-left: 24px; color: var(--muted); font-size: 14px; }
+.nav a:hover { color: var(--text); text-decoration: none; }
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 24px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+  background: var(--gradient1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  font-size: 20px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+.hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+}
+.btn-primary {
+  background: var(--gradient1);
+  color: #fff;
+}
+.btn-primary:hover { opacity: 0.9; transform: translateY(-1px); text-decoration: none; }
+.btn-secondary {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--border); text-decoration: none; }
+.btn-green {
+  background: var(--gradient2);
+  color: #fff;
+}
+.btn-green:hover { opacity: 0.9; transform: translateY(-1px); text-decoration: none; }
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.stat-number {
+  font-size: 36px;
+  font-weight: 800;
+  background: var(--gradient1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stat-label { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+/* Section */
+.section {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  padding: 0 24px;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.section-subtitle {
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+/* Tiers */
+.tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.tier-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.tier-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+.tier-card.featured {
+  border-color: var(--purple);
+  box-shadow: 0 0 0 1px var(--purple);
+}
+.tier-card.featured::before {
+  content: '⭐ MOST POPULAR';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--purple);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-bottom-left-radius: 8px;
+}
+.tier-name { font-size: 20px; font-weight: 700; margin-bottom: 4px; }
+.tier-price { font-size: 36px; font-weight: 800; margin-bottom: 4px; }
+.tier-price span { font-size: 16px; color: var(--muted); font-weight: 400; }
+.tier-desc { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+.tier-features { list-style: none; margin-bottom: 24px; }
+.tier-features li {
+  padding: 6px 0;
+  font-size: 14px;
+  color: var(--text);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.tier-features li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+.tier-btn {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: all 0.2s;
+}
+.tier-btn:hover { background: var(--border); text-decoration: none; }
+.tier-btn.primary {
+  background: var(--gradient1);
+  color: #fff;
+  border: none;
+}
+.tier-btn.primary:hover { opacity: 0.9; }
+
+/* Grants */
+.grants-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.grants-table th {
+  background: var(--border);
+  padding: 14px 20px;
+  text-align: left;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.grants-table td {
+  padding: 14px 20px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+}
+.grants-table tr:hover td { background: rgba(88, 166, 255, 0.05); }
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.badge-green { background: rgba(63, 185, 80, 0.15); color: var(--green); }
+.badge-orange { background: rgba(240, 136, 62, 0.15); color: var(--orange); }
+.badge-purple { background: rgba(188, 140, 255, 0.15); color: var(--purple); }
+
+/* Corporate */
+.corporate-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.corporate-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+.corporate-card h3 { font-size: 18px; margin-bottom: 12px; }
+.corporate-card p { color: var(--muted); font-size: 14px; }
+.corporate-amount {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 12px 0;
+  background: var(--gradient2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Roadmap */
+.roadmap {
+  position: relative;
+  padding-left: 32px;
+}
+.roadmap::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+.roadmap-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+.roadmap-item::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+.roadmap-item.done::before { background: var(--green); }
+.roadmap-item h4 { font-size: 16px; margin-bottom: 4px; }
+.roadmap-item p { color: var(--muted); font-size: 14px; }
+.roadmap-date { font-size: 12px; color: var(--accent); font-weight: 600; }
+
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 60px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+.cta h2 { font-size: 32px; margin-bottom: 12px; }
+.cta p { color: var(--muted); margin-bottom: 24px; font-size: 16px; }
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+.footer a { color: var(--muted); }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 32px; }
+  .hero p { font-size: 16px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">🐘 ZOO</div>
+    <div class="nav">
+      <a href="#sponsor">Sponsor</a>
+      <a href="#tiers">Tiers</a>
+      <a href="#grants">Grants</a>
+      <a href="#corporate">Corporate</a>
+      <a href="#roadmap">Roadmap</a>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<div class="hero">
+  <h1>Support Open-Source AI</h1>
+  <p>ZOO (Nous Research) builds the infrastructure that powers the next generation of AI agents. Your sponsorship directly funds development, research, and community.</p>
+  <div class="hero-buttons">
+    <a href="https://github.com/sponsors/crazycompanyinc" class="btn btn-primary">💜 Sponsor on GitHub</a>
+    <a href="#tiers" class="btn btn-secondary">View Tiers</a>
+    <a href="#corporate" class="btn btn-green">Corporate Sponsorship</a>
+  </div>
+</div>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat-card">
+    <div class="stat-number">139K+</div>
+    <div class="stat-label">GitHub Stars</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">21.4K</div>
+    <div class="stat-label">Forks</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">78</div>
+    <div class="stat-label">Public Repos</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-number">$2.8M</div>
+    <div class="stat-label">Funding Potential</div>
+  </div>
+</div>
+
+<!-- Sponsor Section -->
+<div class="section" id="sponsor">
+  <h2 class="section-title">Why Sponsor ZOO?</h2>
+  <p class="section-subtitle">Every contribution directly accelerates open-source AI development</p>
+  <div class="tiers" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+    <div class="tier-card">
+      <div class="tier-name">🔬 Research</div>
+      <p class="tier-desc">Fund cutting-edge AI agent research, safety experiments, and novel architectures.</p>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">🏗️ Infrastructure</div>
+      <p class="tier-desc">Keep CI/CD pipelines running, servers hosted, and free tiers available for the community.</p>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">🌍 Community</div>
+      <p class="tier-desc">Support hackathons, bounties, documentation, and developer events worldwide.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Tiers -->
+<div class="section" id="tiers">
+  <h2 class="section-title">Sponsorship Tiers</h2>
+  <p class="section-subtitle">Choose a level that works for you or your organization</p>
+  <div class="tiers">
+    <div class="tier-card">
+      <div class="tier-name">🥉 Supporter</div>
+      <div class="tier-price">$5 <span>/mo</span></div>
+      <p class="tier-desc">Show your support for open-source AI</p>
+      <ul class="tier-features">
+        <li>Sponsor badge on your GitHub profile</li>
+        <li>Name listed in SPONSORS.md</li>
+        <li>Access to supporter-only updates</li>
+        <li>Digital ZOO sticker pack</li>
+      </ul>
+      <a href="https://github.com/sponsors/crazycompanyinc" class="tier-btn">Sponsor $5/mo</a>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">🥈 Backer</div>
+      <div class="tier-price">$25 <span>/mo</span></div>
+      <p class="tier-desc">Get early access and influence the roadmap</p>
+      <ul class="tier-features">
+        <li>All Supporter benefits</li>
+        <li>Early access to beta features</li>
+        <li>Monthly community call access</li>
+        <li>Vote on feature prioritization</li>
+        <li>Exclusive Discord channel</li>
+      </ul>
+      <a href="https://github.com/sponsors/crazycompanyinc" class="tier-btn">Sponsor $25/mo</a>
+    </div>
+    <div class="tier-card featured">
+      <div class="tier-name">🥇 Sponsor</div>
+      <div class="tier-price">$100 <span>/mo</span></div>
+      <p class="tier-desc">Perfect for professionals and small teams</p>
+      <ul class="tier-features">
+        <li>All Backer benefits</li>
+        <li>Logo on website sponsors page</li>
+        <li>Priority GitHub issue response</li>
+        <li>Direct Discord channel with core team</li>
+        <li>Quarterly impact report</li>
+      </ul>
+      <a href="https://github.com/sponsors/crazycompanyinc" class="tier-btn primary">Sponsor $100/mo</a>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">💎 Platinum</div>
+      <div class="tier-price">$500 <span>/mo</span></div>
+      <p class="tier-desc">For teams that depend on ZOO infrastructure</p>
+      <ul class="tier-features">
+        <li>All Sponsor benefits</li>
+        <li>Logo in README of all ZOO repos</li>
+        <li>Monthly video call with founders</li>
+        <li>Roadmap input & feature requests</li>
+        <li>Custom integration support</li>
+      </ul>
+      <a href="https://github.com/sponsors/crazycompanyinc" class="tier-btn">Sponsor $500/mo</a>
+    </div>
+    <div class="tier-card">
+      <div class="tier-name">🏢 Enterprise</div>
+      <div class="tier-price">$1,000 <span>/mo</span></div>
+      <p class="tier-desc">Full partnership for organizations</p>
+      <ul class="tier-features">
+        <li>All Platinum benefits</li>
+        <li>Dedicated support engineer</li>
+        <li>Custom feature development</li>
+        <li>Co-marketing opportunities</li>
+        <li>SLA guarantee</li>
+      </ul>
+      <a href="mailto:partners@crazycompanyinc.com" class="tier-btn">Contact for Enterprise</a>
+    </div>
+  </div>
+</div>
+
+<!-- Grants -->
+<div class="section" id="grants">
+  <h2 class="section-title">Active Grant Applications</h2>
+  <p class="section-subtitle">We're pursuing every available funding source to maximize ZOO's impact</p>
+  <table class="grants-table">
+    <thead>
+      <tr>
+        <th>Program</th>
+        <th>Value</th>
+        <th>Status</th>
+        <th>Deadline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Google for Startups Cloud</strong></td>
+        <td>$350,000</td>
+        <td><span class="badge badge-orange">Pending</span></td>
+        <td>Rolling</td>
+      </tr>
+      <tr>
+        <td><strong>Microsoft for Startups</strong></td>
+        <td>$150,000</td>
+        <td><span class="badge badge-orange">Pending</span></td>
+        <td>Rolling</td>
+      </tr>
+      <tr>
+        <td><strong>AWS Activate</strong></td>
+        <td>$100,000</td>
+        <td><span class="badge badge-orange">Pending</span></td>
+        <td>Rolling</td>
+      </tr>
+      <tr>
+        <td><strong>NVIDIA Inception</strong></td>
+        <td>GPU Credits</td>
+        <td><span class="badge badge-orange">Pending</span></td>
+        <td>Rolling</td>
+      </tr>
+      <tr>
+        <td><strong>Y Combinator S26</strong></td>
+        <td>$500,000</td>
+        <td><span class="badge badge-purple">Preparing</span></td>
+        <td>Batch</td>
+      </tr>
+      <tr>
+        <td><strong>GitHub Accelerator</strong></td>
+        <td>TBD</td>
+        <td><span class="badge badge-green">Ideal Fit</span></td>
+        <td>Rolling</td>
+      </tr>
+      <tr>
+        <td><strong>NSF SBIR Phase I</strong></td>
+        <td>$275,000</td>
+        <td><span class="badge badge-purple">Preparing</span></td>
+        <td>Quarterly</td>
+      </tr>
+      <tr>
+        <td><strong>EU Horizon Europe</strong></td>
+        <td>€500K–€5M</td>
+        <td><span class="badge badge-purple">Preparing</span></td>
+        <td>Various</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="text-align:center; margin-top:16px; color:var(--muted); font-size:14px;">
+    Total potential grant funding: <strong style="color:var(--green);">$1.5M–$7M+</strong>
+  </p>
+</div>
+
+<!-- Corporate -->
+<div class="section" id="corporate">
+  <h2 class="section-title">Corporate Sponsorship</h2>
+  <p class="section-subtitle">Strategic partnerships for companies building on AI agents</p>
+  <div class="corporate-grid">
+    <div class="corporate-card">
+      <h3>🥉 Bronze Partner</h3>
+      <div class="corporate-amount">$10,000/yr</div>
+      <p>Logo on website, quarterly newsletter mention, early access to releases, 10% discount on enterprise support.</p>
+    </div>
+    <div class="corporate-card">
+      <h3>🥈 Silver Partner</h3>
+      <div class="corporate-amount">$25,000/yr</div>
+      <p>All Bronze + logo in README, priority support, quarterly strategy call, co-branded case study.</p>
+    </div>
+    <div class="corporate-card">
+      <h3>🥇 Gold Partner</h3>
+      <div class="corporate-amount">$50,000/yr</div>
+      <p>All Silver + dedicated engineer, custom integrations, roadmap influence, co-marketing campaign.</p>
+    </div>
+    <div class="corporate-card">
+      <h3>💎 Platinum Partner</h3>
+      <div class="corporate-amount">$100,000/yr</div>
+      <p>All Gold + board advisory seat, exclusive features, white-label options, event sponsorship.</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top:24px;">
+    <a href="https://github.com/crazycompanyinc/zoo-sponsors/blob/main/CORPORATE.md" class="btn btn-secondary">📄 Full Corporate Prospectus</a>
+  </div>
+</div>
+
+<!-- Roadmap -->
+<div class="section" id="roadmap">
+  <h2 class="section-title">Funding Roadmap</h2>
+  <p class="section-subtitle">Our path to sustainable open-source funding</p>
+  <div class="roadmap">
+    <div class="roadmap-item done">
+      <div class="roadmap-date">✅ May 2026</div>
+      <h4>Funding Infrastructure Built</h4>
+      <p>Created zoo-sponsors repo, FUNDING.yml across 78 repos, corporate prospectus, grant tracker, Open Collective draft.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-date">🎯 May 2026</div>
+      <h4>GitHub Sponsors Application</h4>
+      <p>Apply as crazycompanyinc individual. Requires browser-based GitHub login. Materials ready.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-date">🎯 May 2026</div>
+      <h4>Open Collective Launch</h4>
+      <p>Create collective under Open Source Collective fiscal host. Application draft ready.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-date">🎯 June 2026</div>
+      <h4>Cloud Credit Applications</h4>
+      <p>Apply to Google ($350K), Microsoft ($150K), AWS ($100K), NVIDIA Inception.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-date">🎯 Q3 2026</div>
+      <h4>Accelerator & Grant Applications</h4>
+      <p>Y Combinator, NSF SBIR, GitHub Accelerator, EU Horizon Europe.</p>
+    </div>
+    <div class="roadmap-item">
+      <div class="roadmap-date">🎯 Q4 2026</div>
+      <h4>Corporate Partnership Outreach</h4>
+      <p>Target 20 companies with personalized sponsorship proposals.</p>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <div class="cta">
+    <h2>Ready to Support Open-Source AI?</h2>
+    <p>Every dollar goes directly to building, researching, and maintaining the AI infrastructure that thousands of developers depend on.</p>
+    <div class="hero-buttons">
+      <a href="https://github.com/sponsors/crazycompanyinc" class="btn btn-primary">💜 Sponsor Now</a>
+      <a href="https://github.com/crazycompanyinc/zoo-sponsors" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <p>🐘 ZOO (Nous Research) — Open-source AI for everyone</p>
+  <p style="margin-top:8px;">
+    <a href="https://github.com/crazycompanyinc">GitHub</a> ·
+    <a href="https://github.com/crazycompanyinc/zoo-sponsors">Sponsors</a> ·
+    <a href="https://github.com/crazycompanyinc/zoo-website">Website</a>
+  </p>
+  <p style="margin-top:12px; font-size:12px;">
+    Funding infrastructure auto-generated by CROWDFUNDING heartbeat · 2026-05-09 06:42 UTC
+  </p>
+</div>
+
+</body>
+</html>
