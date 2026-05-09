@@ -1,76 +1,20 @@
-# 🏢 Corporate Sponsorship Prospectus
+# ZOO Corporate Sponsorship Prospectus
 
-## ZOO — Open-Source AI Ecosystem
+ZOO (Nous Research) provides the essential infrastructure for intelligent agents. Partnering with us positions your brand at the forefront of the AI agent revolution.
 
-**Prepared:** 2026-05-09
-**Contact:** github.com/crazycompanyinc/zoo-funding
+## Why Partner with ZOO?
+- **Leadership**: 139K+ GitHub stars and 21.4K forks on our primary infrastructure, reflecting massive developer mindshare.
+- **Reach**: Hundreds of thousands of developers use ZOO daily.
+- **Impact**: Open-source AI agents are the next platform shift.
 
----
+## Partnership Tiers
 
-## Executive Summary
+| Tier | Annual Fee | Key Benefits |
+| :--- | :--- | :--- |
+| **Bronze** | $10,000 | Logo on sponsors page, quarterly newsletter mention, early access to releases. |
+| **Silver** | $25,000 | All Bronze + logo in primary REPO README, priority issue support, quarterly strategy call. |
+| **Gold** | $50,000 | All Silver + dedicated support engineer, custom integrations, roadmap influence. |
+| **Platinum** | $100,000 | All Gold + board advisory seat, white-label options, event headline sponsorship. |
 
-ZOO (Crazy Company Inc) builds open-source AI agent infrastructure. Our ecosystem of **78+ repositories** reaches thousands of AI/ML developers worldwide.
-
-### Why Sponsor?
-
-- **Developer audience** — high-value technical decision-makers
-- **Growing ecosystem** — new repos added weekly
-- **Open-source credibility** — community-driven development
-- **AI/ML focus** — aligned with sponsor products
-
-## Sponsorship Tiers
-
-### Bronze — $10,000/year
-- Logo on README across all repos
-- Listed in SPONSORS.md
-- Quarterly impact report
-
-### Silver — $25,000/year
-- Everything in Bronze
-- Logo on website
-- Blog post feature (1/year)
-- Social media mention
-
-### Gold — $50,000/year
-- Everything in Silver
-- Priority issue response
-- Co-marketing opportunities
-- Conference booth presence
-
-### Platinum — $100,000/year
-- Everything in Gold
-- Monthly sponsor call
-- Roadmap input
-- Dedicated support channel
-- Custom integration support
-
-## Revenue Projections
-
-| Scenario | Sponsors | Avg. Value | Annual Revenue |
-|----------|----------|------------|----------------|
-| Conservative | 5 | $20,000 | $100,000 |
-| Moderate | 15 | $25,000 | $375,000 |
-| Optimistic | 30 | $30,000 | $900,000 |
-
-## Target Sponsors
-
-### AI/ML Companies
-- Anthropic, OpenAI, Mistral AI, Cohere, Hugging Face
-
-### Cloud Providers
-- Google Cloud, Microsoft Azure, AWS, Oracle Cloud, DigitalOcean
-
-### Dev Tools
-- Vercel, Railway, Render, Fly.io, Supabase
-
-### AI Infrastructure
-- Together AI, Fireworks AI, Groq, Cerebras, Lambda Labs
-
-## Contact
-
-📧 github.com/crazycompanyinc/zoo-funding
-🔗 github.com/crazycompanyinc
-
----
-
-*© 2026 ZOO (Crazy Company Inc)*
+## Next Steps
+To discuss a partnership, contact **partners@nousresearch.com**.
